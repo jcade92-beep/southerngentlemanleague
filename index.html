@@ -9,20 +9,27 @@
       color: #fff;
       font-family: Arial, sans-serif;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
       text-align: center;
       font-size: 2.5rem;
     }
+
+    #title {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
+  <div id="title">Hound Dogs Year</div>
   <div id="timer"></div>
 
   <script>
     // Start date: First season of the Southern Gentleman League
-    const startDate = new Date("2008-09-04T20:00:00-05:00"); 
+    const startDate = new Date("2008-09-04T20:00:00-05:00");
 
     function updateTimer() {
       const now = new Date();
@@ -51,3 +58,4 @@
   </script>
 </body>
 </html>
+
