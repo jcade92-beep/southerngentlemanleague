@@ -2,12 +2,12 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>Commissioner Shame Clock</title>
+  <title>Hound Dogs Year Counter</title>
   <style>
     body {
       background-color: #111;
       color: #fff;
-      font-family: "Georgia", "Times New Roman", serif;
+      font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -17,20 +17,18 @@
     }
 
     #title {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      border-bottom: 2px solid #fff;
-      padding-bottom: 8px;
+      font-size: 2.5rem;
+      margin-bottom: 30px; /* equal spacing above the timer */
     }
 
     #timer {
       font-size: 2.5rem;
-      margin-top: 20px;
+      line-height: 1.6; /* consistent spacing between the two timer lines */
     }
   </style>
 </head>
 <body>
-  <div id="title">Hound Dogs Year</div>
+  <div id="title">Hound Dogs Year Counter</div>
   <div id="timer"></div>
 
   <script>
@@ -55,7 +53,7 @@
       const seconds = Math.floor(diff / 1000);
 
       document.getElementById("timer").innerHTML =
-        `${years} years, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+        `${years} years, ${days} days, ${hours} hours,<br>${minutes} minutes, ${seconds} seconds`;
     }
 
     setInterval(updateTimer, 1000);
